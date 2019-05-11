@@ -1,0 +1,54 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// This file is part of BFEngine, a 2D simulation engine.
+// Copyright (C) 2016 - 2019 Torsten Büschenfeld
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////
+///
+/// \file       math_constants.h
+/// \brief      Common constants for the planeworld engine
+///
+/// \author     Torsten Büschenfeld (planeworld@bfeld.eu)
+/// \date       2016-11-12
+///
+////////////////////////////////////////////////////////////////////////////////
+
+#ifndef MATH_CONSTANTS_H
+#define MATH_CONSTANTS_H
+
+//--- Program header ---------------------------------------------------------//
+
+//--- Standard header --------------------------------------------------------//
+#include <cmath>
+
+/// BFEngine namespace
+namespace bfe
+{
+
+//--- Misc header ------------------------------------------------------------//
+// These constants may exist as compiler macros, but due to portability reasons
+// and to avoid ifdef commands, they are redefined here
+const double MATH_PI = 2.0 * std::asin(1.0);
+const double MATH_2PI = 2.0 * MATH_PI;
+const double MATH_PI2 = MATH_PI * 0.5;
+const double MATH_SQRT2 = std::sqrt(2.0);
+const double MATH_E = std::exp(1.0);
+
+} // namespace bfe
+
+#endif // MATH_CONSTANTS_H
