@@ -44,12 +44,12 @@ IThreadModule::IThreadModule() : m_fFrequency(THREAD_MODULE_DEFAULT_FREQUENCY),
     METHOD_ENTRY("IThreadModule::IThreadModule")
     CTOR_CALL("IThreadModule::IThreadModule")
     
-    #ifdef PW_MULTITHREADING
+    #ifdef BFE_MULTITHREADING
         m_strModuleName = "Thread Module";
     #endif
 }
 
-#ifdef PW_MULTITHREADING
+#ifdef BFE_MULTITHREADING
   ////////////////////////////////////////////////////////////////////////////////
   ///
   /// \brief Runs the visuals engine, called as a thread.

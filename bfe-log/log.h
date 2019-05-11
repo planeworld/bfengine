@@ -255,7 +255,7 @@ inline bool CLog::removeListener(const std::string& _strListener)
 {
     METHOD_ENTRY("CLog::removeListener")
     
-    PW_ASSERT(m_LogListeners.erase(_strListener) != 0);
+    BFE_ASSERT(m_LogListeners.erase(_strListener) != 0);
     
     m_LogListeners.erase(_strListener);
     return true;

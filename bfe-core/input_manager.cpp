@@ -43,7 +43,7 @@ CInputManager::CInputManager() : m_pWindow(nullptr),
     METHOD_ENTRY("CInputManager::CInputManager")
     CTOR_CALL("CInputManager::CInputManager")
     
-    #ifdef PW_MULTITHREADING
+    #ifdef BFE_MULTITHREADING
         m_strModuleName = "Input Manager";
     #endif
     

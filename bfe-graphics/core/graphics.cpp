@@ -603,7 +603,7 @@ bool CGraphics::init()
     //--------------------------------------------------------------------------
     // Initialize window and graphics
     //--------------------------------------------------------------------------
-    #ifdef PW_MULTITHREADING
+    #ifdef BFE_MULTITHREADING
         m_pWindow->setActive(true);
     #endif
     

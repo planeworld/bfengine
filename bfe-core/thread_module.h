@@ -66,7 +66,7 @@ class IThreadModule
         virtual bool    processFrame() = 0;
         void            setFrequency(const double&);
 
-        #ifdef PW_MULTITHREADING
+        #ifdef BFE_MULTITHREADING
           void run();
           void terminate();
         #endif
@@ -74,7 +74,7 @@ class IThreadModule
     protected:
 
         //--- Methods [private] ----------------------------------------------//
-        #ifdef PW_MULTITHREADING
+        #ifdef BFE_MULTITHREADING
           virtual void  preRun() {}         ///< Everything that needs to be done before run()
           
           std::string   m_strModuleName;    ///< Name of module
@@ -140,7 +140,7 @@ inline void IThreadModule::setFrequency(const double& _fFrequency)
     m_fFrequency = _fFrequency;
 }
 
-#ifdef PW_MULTITHREADING
+#ifdef BFE_MULTITHREADING
   ////////////////////////////////////////////////////////////////////////////////
   ///
   /// \brief Stops module

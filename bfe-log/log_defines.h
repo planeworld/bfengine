@@ -100,7 +100,7 @@
 ///         Macro simplifying log of domain: memory freed
 /// \def MEM_FREED_QUIET(a)
 ///         Macro simplifying log of domain: memory freed. Do not call listeners
-/// \def PW_ASSERT(a)
+/// \def BFE_ASSERT(a)
 ///         Assertion fail
 /// \def DOMAIN_MEMORY
 ///         Special define flag, indicating that "memory alloc" and "mem freed"
@@ -148,7 +148,7 @@
 #else
     #define DOM_MEMF(a)
 #endif
-// Deprecated, use PW_ASSERT
+// Deprecated, use BFE_ASSERT
 #ifdef DOMAIN_DEV_LOGIC
     #define DOM_DEV(a)          {bfe::CLog::s_Dom = bfe::LOG_DOMAIN_DEV_LOGIC; a bfe::CLog::s_Dom = bfe::LOG_DOMAIN_NONE;}
 #else
@@ -499,7 +499,7 @@
 #endif
 
 // Macro for assertions, replaces DOM_DEV
-#define PW_ASSERT(a) assert(a)
+#define BFE_ASSERT(a) assert(a)
 
 // Additional macro for memory management
 #ifdef DOMAIN_MEMORY_ALLOCATED

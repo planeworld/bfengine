@@ -161,8 +161,8 @@ inline T* CHandleManager::get(const HandleID _ID)
 {
     METHOD_ENTRY("CHandleManager::get")
     
-    PW_ASSERT(_ID.C.Index > 0u);
-    PW_ASSERT(m_HandleMap[_ID.C.Index-1].pEntry != nullptr);
+    BFE_ASSERT(_ID.C.Index > 0u);
+    BFE_ASSERT(m_HandleMap[_ID.C.Index-1].pEntry != nullptr);
     
     return static_cast<T*>(m_HandleMap[_ID.C.Index-1].pEntry);
 }
@@ -181,7 +181,7 @@ inline void CHandleManager::update(HandleID& _ID, T* const _ptr)
 {
     METHOD_ENTRY("CHandleManager::update")
     
-    PW_ASSERT(_ptr != nullptr);
+    BFE_ASSERT(_ptr != nullptr);
     if (this->isValid(_ID))
     {
         m_HandleMap[_ID.C.Index-1].pEntry = _ptr;

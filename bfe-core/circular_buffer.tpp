@@ -107,7 +107,7 @@ const T& CCircularBuffer<T>::operator[](const std::size_t& _nI) const
 {
     METHOD_ENTRY("CCircularBuffer::operator[]")
   
-    PW_ASSERT(_nI < m_nSize);
+    BFE_ASSERT(_nI < m_nSize);
     
     std::size_t nI = _nI + m_nBegin;
     if (nI >= m_nCapacity) nI-=m_nCapacity;

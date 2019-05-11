@@ -75,7 +75,7 @@ class CSpinlock
         void setLock();
         void waitForRelease();
         
-        #ifdef PW_MULTITHREADING
+        #ifdef BFE_MULTITHREADING
             static std::uint64_t getSleeps(){return s_Sleeps;}
             static std::uint64_t getWaits(){return s_Waits;}
             static std::uint64_t getYields(){return s_Yields;}
@@ -84,7 +84,7 @@ class CSpinlock
     private:
         
         //--- Variables [private] --------------------------------------------//
-        #ifdef PW_MULTITHREADING
+        #ifdef BFE_MULTITHREADING
             std::atomic_flag isAccessed = ATOMIC_FLAG_INIT; ///< Indicates access, important for multithreading
             static std::uint64_t s_Sleeps;
             static std::uint64_t s_Waits;

@@ -52,7 +52,7 @@ CLuaManager::CLuaManager() : IComInterfaceProvider(),
     METHOD_ENTRY("CLuaManager::CLuaManager")
     CTOR_CALL("CLuaManager::CLuaManager")
     
-    #ifdef PW_MULTITHREADING
+    #ifdef BFE_MULTITHREADING
         m_strModuleName = "Lua Manager";
     #endif
 }

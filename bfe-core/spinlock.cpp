@@ -36,7 +36,7 @@
 
 using namespace bfe;
 
-#ifdef PW_MULTITHREADING
+#ifdef BFE_MULTITHREADING
     std::uint64_t CSpinlock::s_Sleeps = 0u;
     std::uint64_t CSpinlock::s_Waits = 0u;
     std::uint64_t CSpinlock::s_Yields = 0u;
@@ -54,7 +54,7 @@ using namespace bfe;
 void CSpinlock::acquireLock()
 {
     METHOD_ENTRY("CSpinlock::acquireLock")
-    #ifdef PW_MULTITHREADING
+    #ifdef BFE_MULTITHREADING
         int nIter = 0;
         while (isAccessed.test_and_set(std::memory_order_acquire))
         {
@@ -92,7 +92,7 @@ void CSpinlock::acquireLock()
 void CSpinlock::releaseLock()
 {
     METHOD_ENTRY("CSpinlock::releaseLock")
-    #ifdef PW_MULTITHREADING
+    #ifdef BFE_MULTITHREADING
         isAccessed.clear(std::memory_order_release);
     #endif
 }
@@ -105,7 +105,7 @@ void CSpinlock::releaseLock()
 void CSpinlock::setLock()
 {
     METHOD_ENTRY("CSpinlock::setLock")
-    #ifdef PW_MULTITHREADING
+    #ifdef BFE_MULTITHREADING
         isAccessed.test_and_set(std::memory_order_release);
     #endif
 }
@@ -118,7 +118,7 @@ void CSpinlock::setLock()
 void CSpinlock::waitForRelease()
 {
     METHOD_ENTRY("CSpinlock::waitForRelease")
-    #ifdef PW_MULTITHREADING
+    #ifdef BFE_MULTITHREADING
         int nIter = 0;
         while (isAccessed.test_and_set(std::memory_order_acquire))
         {

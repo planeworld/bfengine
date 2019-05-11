@@ -45,7 +45,7 @@ HandleID CHandleManager::add(void* const _ptr)
 {
     METHOD_ENTRY("CHandleManager::add")
     
-    PW_ASSERT(_ptr != nullptr);
+    BFE_ASSERT(_ptr != nullptr);
     
     HandleMapEntry HMap;
     HMap.pEntry = _ptr;

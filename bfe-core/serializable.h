@@ -108,7 +108,7 @@ inline void ISerializable::setSerializer(ISerializer* const _pSerializer)
 inline void ISerializable::serialize(const std::string& _strDescr) const
 {
     METHOD_ENTRY("ISerializable::serialize")
-    PW_ASSERT(s_pSerializer != nullptr);
+    BFE_ASSERT(s_pSerializer != nullptr);
 
     s_pSerializer->serialize(_strDescr);
     this->mySerialize();
@@ -126,7 +126,7 @@ inline void ISerializable::serialize(const std::string& _strDescr) const
 inline void ISerializable::serialize(const std::string& _strDescr, const ISerializable* const _pSerializable) const
 {
     METHOD_ENTRY("ISerializable::serialize")
-    PW_ASSERT(s_pSerializer != nullptr);
+    BFE_ASSERT(s_pSerializer != nullptr);
 
     _pSerializable->serialize(_strDescr);
 }
@@ -142,7 +142,7 @@ inline void ISerializable::serialize(const std::string& _strDescr, const ISerial
 inline void ISerializable::serialize(const std::string& _strDescr, bool _bB) const
 {
     METHOD_ENTRY("ISerializable::serialize")
-    PW_ASSERT(s_pSerializer != nullptr);
+    BFE_ASSERT(s_pSerializer != nullptr);
     
     s_pSerializer->serialize(_strDescr, _bB);
 }
@@ -158,7 +158,7 @@ inline void ISerializable::serialize(const std::string& _strDescr, bool _bB) con
 inline void ISerializable::serialize(const std::string& _strDescr, double _fD) const
 {
     METHOD_ENTRY("ISerializable::serialize")
-    PW_ASSERT(s_pSerializer != nullptr);
+    BFE_ASSERT(s_pSerializer != nullptr);
     
     s_pSerializer->serialize(_strDescr, _fD);
 }
@@ -174,7 +174,7 @@ inline void ISerializable::serialize(const std::string& _strDescr, double _fD) c
 inline void ISerializable::serialize(const std::string& _strDescr, int _nI) const
 {
     METHOD_ENTRY("ISerializable::serialize")
-    PW_ASSERT(s_pSerializer != nullptr);
+    BFE_ASSERT(s_pSerializer != nullptr);
     
     s_pSerializer->serialize(_strDescr, _nI);
 }
@@ -190,7 +190,7 @@ inline void ISerializable::serialize(const std::string& _strDescr, int _nI) cons
 inline void ISerializable::serialize(const std::string& _strDescr, unsigned int _unI) const
 {
     METHOD_ENTRY("ISerializable::serialize")
-    PW_ASSERT(s_pSerializer != nullptr);
+    BFE_ASSERT(s_pSerializer != nullptr);
     
     s_pSerializer->serialize(_strDescr, _unI);
 }
@@ -206,7 +206,7 @@ inline void ISerializable::serialize(const std::string& _strDescr, unsigned int 
 inline void ISerializable::serialize(const std::string& _strDescr, std::size_t _nI) const
 {
     METHOD_ENTRY("ISerializable::serialize")
-    PW_ASSERT(s_pSerializer != nullptr);
+    BFE_ASSERT(s_pSerializer != nullptr);
     
     s_pSerializer->serialize(_strDescr, _nI);
 }
@@ -222,7 +222,7 @@ inline void ISerializable::serialize(const std::string& _strDescr, std::size_t _
 inline void ISerializable::serialize(const std::string& _strDescr, const std::string& _strS) const
 {
     METHOD_ENTRY("ISerializable::serialize")
-    PW_ASSERT(s_pSerializer != nullptr);
+    BFE_ASSERT(s_pSerializer != nullptr);
     
     s_pSerializer->serialize(_strDescr, _strS);
 }
@@ -238,7 +238,7 @@ inline void ISerializable::serialize(const std::string& _strDescr, const std::st
 inline void ISerializable::serialize(const std::string& _strDescr, const Vector2d& _vecV) const
 {
     METHOD_ENTRY("ISerializable::serialize")
-    PW_ASSERT(s_pSerializer != nullptr);
+    BFE_ASSERT(s_pSerializer != nullptr);
     
     s_pSerializer->serialize(_strDescr, _vecV);
 }
@@ -254,7 +254,7 @@ inline void ISerializable::serialize(const std::string& _strDescr, const Vector2
 inline void ISerializable::serialize(const std::string& _strDescr, const Vector2i& _vecV) const
 {
     METHOD_ENTRY("ISerializable::serialize")
-    PW_ASSERT(s_pSerializer != nullptr);
+    BFE_ASSERT(s_pSerializer != nullptr);
     
     s_pSerializer->serialize(_strDescr, _vecV);
 }
