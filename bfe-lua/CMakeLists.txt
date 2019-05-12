@@ -1,3 +1,5 @@
+FIND_PACKAGE(Lua REQUIRED)
+
 SET(HDRS
     ./3rdparty/sol2/sol.hpp
     lua_manager.h
@@ -11,6 +13,7 @@ ADD_LIBRARY (bfe-lua SHARED ${SRCS} ${HDRS})
 
 target_include_directories(
                             bfe-lua PRIVATE 
+                            ${LUA_INCLUDE_DIR}
                             ./3rdparty/sol2/
                             ../bfe-core/
                             ../bfe-core/3rdparty/ConcurrentQueue/
