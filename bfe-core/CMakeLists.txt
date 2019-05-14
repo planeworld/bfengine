@@ -1,5 +1,6 @@
 SET(HDRS
     3rdparty/ConcurrentQueue/concurrentqueue.h
+    bfe_version.h
     build_time_formatter.h
     circular_buffer.h
     circular_buffer.tpp
@@ -26,6 +27,7 @@ SET(HDRS
 )
 
 SET(SRCS
+    bfe_version.cpp
     com_console.cpp
     com_interface.cpp
     handle.cpp
