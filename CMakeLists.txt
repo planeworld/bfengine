@@ -1,7 +1,13 @@
 cmake_minimum_required(VERSION 3.1)
 
 SET(OpenGL_GL_PREFERENCE "GLVND")
-SET(CMAKE_CXX_FLAGS "-std=c++14 -mtune=native -Wall -Wextra -pedantic" CACHE STRING "")
+
+IF ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
+    SET(CMAKE_CXX_FLAGS "-std=c++14 -mtune=native -Wall -pedantic" CACHE STRING "")
+ELSE()
+    SET(CMAKE_CXX_FLAGS "-std=c++14 -mtune=native -Wall -Wextra -pedantic" CACHE STRING "")
+ENDIF()
+
 
 SET(DEFAULTDATADIR ${CMAKE_INSTALL_PREFIX}/share/bfengine)
 ADD_DEFINITIONS(-DDEFAULTDATADIR="${DEFAULTDATADIR}")
