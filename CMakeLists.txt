@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.1)
 SET(OpenGL_GL_PREFERENCE "GLVND")
 
 IF ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
+    message(STATUS "MSVC detected")
     SET(CMAKE_CXX_FLAGS "-std=c++14 -mtune=native -Wall -pedantic" CACHE STRING "")
 ELSE()
     SET(CMAKE_CXX_FLAGS "-std=c++14 -mtune=native -Wall -Wextra -pedantic" CACHE STRING "")
