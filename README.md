@@ -11,10 +11,10 @@ BFEngine is an a 2D simulation engine.
 
 Dependencies
 ------------
-  * [eigen](http://eigen.tuxfamily.org/)
-  * [glm](https://glm.g-truc.net/)
-  * [Lua](https://www.lua.org/)
-  * [SFML](https://www.sfml-dev.org/)
+*  [eigen](http://eigen.tuxfamily.org/)
+*  [glm](https://glm.g-truc.net/)
+*  [Lua](https://www.lua.org/)
+*  [SFML](https://www.sfml-dev.org/)
 
 Installation
 ------------
