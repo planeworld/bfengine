@@ -243,7 +243,7 @@ void CComConsole::execute()
         {
             m_strRet = m_pComInterface->call(m_strCurrent);
         }
-        catch (CComInterfaceException ComIntEx)
+        catch (const CComInterfaceException& ComIntEx)
         {
             m_strRet = ComIntEx.getMessage();
         }

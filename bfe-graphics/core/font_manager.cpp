@@ -279,7 +279,7 @@ float CFontManager::getTextLength(const std::string& _strText,
         
         float fLength = 0.0f;
         float fLengthMax = 0.0f;
-        const stbtt_packedchar* b;
+        
         for (const auto Ch : _strText)
         {
             if (Ch == 10) // Line feed
@@ -290,7 +290,7 @@ float CFontManager::getTextLength(const std::string& _strText,
                 }
                 fLength = 0.0;
             }
-            b = m_FontsCharInfo[nID] + Ch-ASCII_FIRST;
+            const stbtt_packedchar* b = m_FontsCharInfo[nID] + Ch-ASCII_FIRST;
             fLength += b->xadvance;
         }
         if (fLength > fLengthMax)

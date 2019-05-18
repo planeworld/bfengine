@@ -42,7 +42,8 @@ using namespace bfe;
 CWidgetConsole::CWidgetConsole(CFontManager* const _pFontManager) :
                                IWidget(_pFontManager),
                                ConsoleText(_pFontManager),
-                               m_nComHistoryVisible(10)
+                               m_nComHistoryVisible(10),
+                               m_pComConsole(nullptr)
 {
     METHOD_ENTRY("CWidgetConsole::CWidgetConsole");
     CTOR_CALL("CWidgetConsole::CWidgetConsole");

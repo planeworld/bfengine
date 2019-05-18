@@ -751,6 +751,8 @@ CLog::CLog():   m_bDynSetting(LOG_DYNSET_ON),
                 m_bPBarDone(false),
                 m_fEstimationSmoothing(0.75),
                 m_iProcessorCount(std::thread::hardware_concurrency()),
+                m_strMsgBufSrc(""),
+                m_strMsgBufMsg(""),
                 m_unColsMax(LOG_COLSMAX_DEFAULT),
                 m_strColDefault(""),
                 m_strColSender(""),
@@ -852,8 +854,6 @@ CLog::CLog():   m_bDynSetting(LOG_DYNSET_ON),
     #endif
     
     // No previous message, Dom and Sev are not relvant
-    m_strMsgBufSrc = "";
-    m_strMsgBufMsg = "";
     m_nMsgCounter = 1u;
 
     // Entry appears late, because just now the Logging class is initialized.
