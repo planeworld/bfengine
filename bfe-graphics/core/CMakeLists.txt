@@ -8,6 +8,7 @@ ENDIF()
 SET(HDRS
     3rdparty/stb_truetype/stb_rect_pack.h
     3rdparty/stb_truetype/stb_truetype.h
+    3rdparty/stb_image.h
     font_manager.h
     graphics.h
     render_mode.h
@@ -36,6 +37,7 @@ target_include_directories(
                     bfe-gfx-core PRIVATE
                     ${OPENGL_INCLUDE_DIR}
                     ./3rdparty/stb_truetype/
+                    ./3rdparty/
                     ../../bfe-core/
                     ../../bfe-log/
                     ../../bfe-util/math/

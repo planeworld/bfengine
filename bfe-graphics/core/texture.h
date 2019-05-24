@@ -64,7 +64,8 @@ class CTexture
         
         //--- Methods --------------------------------------------------------//
         bool destroy();
-        bool init();
+        bool init(const std::uint16_t, const std::uint16_t, const unsigned char* const = nullptr);
+        bool load(const std::string&);
                 
         //--- friends --------------------------------------------------------//
 
