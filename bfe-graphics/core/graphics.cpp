@@ -1568,7 +1568,7 @@ void CGraphics::rect(const Vector2d& _vecLL, const Vector2d& _vecUR)
     m_vecIndicesLines[m_unIndexLines++] = m_unIndex-3;   // 1
     m_unIndex++;
     
-    m_uncI += 12;
+    m_uncI += 16;
     
     if (m_uncI > GRAPHICS_SIZE_OF_INDEX_BUFFER/2)
     {
@@ -1630,7 +1630,7 @@ void CGraphics::texturedRect(const Vector2d& _vecLL, const Vector2d& _vecUR,
     m_vecIndicesTriangles[m_unIndexTriangles++] = m_unIndex+1u;  // 4
     m_unIndex += 2u;
     
-    m_uncI += 12;
+    m_uncI += 16;
     
     if (m_uncI > GRAPHICS_SIZE_OF_INDEX_BUFFER/2)
     {
@@ -1698,7 +1698,7 @@ void CGraphics::texturedRect(const Vector2d& _vecLL, const Vector2d& _vecUR,
     m_vecIndicesTriangles[m_unIndexTriangles++] = m_unIndex+1u;  // 4
     m_unIndex += 2u;
     
-    m_uncI += 12;
+    m_uncI += 16;
     
     if (m_uncI > GRAPHICS_SIZE_OF_INDEX_BUFFER/2)
     {
