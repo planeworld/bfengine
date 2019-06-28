@@ -74,8 +74,12 @@ bool CTexture::init(const std::uint16_t _unResX, const std::uint16_t _unResY,
     glGenTextures(1, &m_unID);
     glBindTexture(GL_TEXTURE_2D, m_unID);
     
-    glTexStorage2D(GL_TEXTURE_2D, 1, GL_RGBA8, _unResX, _unResY);
-    glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, _unResX, _unResY, GL_RGBA8, GL_UNSIGNED_BYTE, _puchData);
+    const int nNoOfMipMapLevels = std::floor(std::log2(std::max(_unResX,_unResY)))+1;
+    DOM_VAR(DEBUG_MSG("Texture", nNoOfMipMapLevels << " MipMapLevels created."))
+    
+    glTexStorage2D(GL_TEXTURE_2D, nNoOfMipMapLevels, GL_RGBA8, _unResX, _unResY);
+    glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, _unResX, _unResY, GL_RGB, GL_UNSIGNED_BYTE, _puchData);
+
     glGenerateMipmap(GL_TEXTURE_2D);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
